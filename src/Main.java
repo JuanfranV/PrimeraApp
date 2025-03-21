@@ -30,7 +30,7 @@ public class Main {
                 System.out.println("Se agregó a la lista");
 
             }else {
-                System.out.println("no ahayd f er");
+                System.out.println("no ahadfyd f er");
             }
 
         }
