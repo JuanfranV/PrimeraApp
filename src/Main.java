@@ -10,7 +10,7 @@ public class Main {
         String accion;
         accion = (scanner.next()).toUpperCase();
 
-        System.out.println(accion + "sastre");
+        System.out.println(accion + "sastrepopo");
 
 
     }
