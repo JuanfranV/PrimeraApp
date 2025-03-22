@@ -13,6 +13,8 @@ public class Main {
         String siONo;
         String nuevoProducto;
         String cantidadProducto;
+        String nuevaCantidad;
+        int numCambioCantidad;
 
         do {
             System.out.println("----------------------------");
@@ -52,16 +54,33 @@ public class Main {
 
             if (accion.equals("LISTA DE PRODUCTOS")) {
 
-                listaProductos.add("--------------");
-                listaCantidadPoducto.add("--------------");
+                listaProductos.add("**Producto**");
+                listaCantidadPoducto.add("**Cantidad**");
 
                 System.out.println("La lista de productos es: ");
-                for (String cantidad : listaCantidadPoducto){
-                    for (String producto : listaProductos) {
-                        System.out.println("x" + cantidad + " " + producto);
-                    }
+                for (int i = 0; i < listaCantidadPoducto.size(); i++){
+                    System.out.println((i + 1) + ". " + "x" + listaCantidadPoducto.get(i) + " " + listaProductos.get(i));
                 }
+            }
 
+            if (accion.equals("ACTUALIZAR CANTIDAD DE PRODUCTO")){
+                System.out.println("A que producto desea cambiar la cantidad de producto. (1,2...)");
+                numCambioCantidad = scanner.nextInt();
+
+                System.out.println("¿Cuál es la nueva cantidad?");
+                nuevaCantidad = scanner.next();
+
+                listaCantidadPoducto.set((numCambioCantidad - 1), nuevaCantidad);
+            }
+
+            if (accion.equals("ELIMINAR PRODUCTO")){
+                System.out.println("A que producto desea cambiar la cantidad de producto. (1,2...)");
+                numCambioCantidad = scanner.nextInt();
+
+                System.out.println("¿Cuál es la nueva cantidad?");
+                nuevaCantidad = scanner.next();
+
+                listaCantidadPoducto.set((numCambioCantidad - 1), nuevaCantidad);
             }
 
         }while (true);
