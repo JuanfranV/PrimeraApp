@@ -45,7 +45,6 @@ public class Main {
                 System.out.println("NO");
                 System.out.println("SI");
                 siONo = scanner.next().toUpperCase();
-                scanner.nextLine();
 
                 if (siONo.equals("SI")) {
                     System.out.println("**Se agregó a la lista**");
