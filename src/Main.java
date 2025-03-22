@@ -16,6 +16,8 @@ public class Main {
         String nuevaCantidad;
         int numCambioCantidad;
         int eliminarProducto;
+        final int UNO = 1; //Constante
+
         do {
             System.out.println("----------------------------");
             System.out.println("Hola ¿Qué deseas hacer?");
@@ -59,7 +61,7 @@ public class Main {
 
                 System.out.println("La lista de productos es: ");
                 for (int i = 0; i < listaCantidadPoducto.size(); i++) {
-                    System.out.println((i + 1) + ". " + "x" + listaCantidadPoducto.get(i) + " " + listaProductos.get(i));
+                    System.out.println((i + UNO) + ". " + "x" + listaCantidadPoducto.get(i) + " " + listaProductos.get(i));
                 }
             }
 
@@ -70,19 +72,16 @@ public class Main {
                 System.out.println("¿Cuál es la nueva cantidad?");
                 nuevaCantidad = scanner.next();
 
-                listaCantidadPoducto.set((numCambioCantidad - 1), nuevaCantidad);
+                listaCantidadPoducto.set((numCambioCantidad - UNO), nuevaCantidad);
             }
 
             if (accion.equals("ELIMINAR PRODUCTO")) {
                 System.out.println("¿Qué producto desea eliminar? (1,2...)");
                 eliminarProducto = scanner.nextInt();
 
-                listaCantidadPoducto.remove(eliminarProducto - 1);
-                listaProductos.remove(eliminarProducto - 1);
+                listaCantidadPoducto.remove(eliminarProducto - UNO);
+                listaProductos.remove(eliminarProducto - UNO);
             }
-
-
         } while (true);
-
     }
 }
